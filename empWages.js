@@ -48,3 +48,11 @@ empCheck=Math. floor (Math. randon ()*10)%3;
 totalEmphrs=getWorkingHours (emcheck);
 let totalEmpliage= emphrs*WAGE_PER_HR;
 console. log (totalEmphage);
+
+totalEmphrs=0;
+for(let i=0; 1<NUM_OF_WORKING_DAYS; i++){
+empCheck=Math. floor (Math. random () *10)%3 ;
+totalEmphrs+=getWorkingHours (empCheck);
+}
+totalEmpWage= totalEmphrs*WAGE_PER_HR;
+console. log (totalEmpWage) ;
