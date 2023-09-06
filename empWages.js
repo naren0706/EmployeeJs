@@ -4,55 +4,48 @@ const IS_FULL_TIME = 2;
 const PART_TIME_HR = 4;
 const FULL_TIME_HR = 8;
 const WAGE_PER_HR = 20;
-
-//UC1
-
+const NUM_OF_WORKING_DAYS=5;
+//UC-1
 let empCheck = Math.floor(Math.random() * 10) % 2;
-
 if (empCheck == IS_ABSENT) {
-  console.log("Employee is Absent");
-} else {
-  console.log("Employee is present");
+    console.log("Employee is Absent");
 }
-
-//UC2
-
-let emphrs = 5;
-empCheck - (Math.floor(Math.random() * 10) % 3);
+else {
+    console.log("Employee is present");
+}
+//UC-2
+let emphrs = 100;
+empCheck = Math.floor(Math.random() * 10) % 3;
 switch (empCheck) {
-  case IS_PART_TIME:
-    emphrs = PART_TIME_HR;
-    break;
-  case IS_FULL_TIME:
-    emphrs = FULL_TIME_HR;
-    break;
-  case IS_ABSENT:
-    emphrs = IS_ABSENT;
+    case IS_PART_TIME: emphrs = PART_TIME_HR;
+        break;
+    case IS_FULL_TIME: emphrs = FULL_TIME_HR
+        break;
+    case IS_ABSENT: emphrs = IS_ABSENT;
 }
 let empWage = emphrs * WAGE_PER_HR;
 console.log(empWage);
-//UC3
-function getworkingHours (empcheck) 
-{
-    switch (empCheck)
-    {
-    case IS_PART_TIME: emphrs=PART_TIME_HR;
-    break;
-    case IS_FULL_TIME: emphrs-FULL_TIME_HR
-    break;
-    case IS_ABSENT: emphrs-IS_ABSENT;
+//UC-3
+function getWorkingHours(empCheck) {
+    switch (empCheck) {
+        case IS_PART_TIME: emphrs = PART_TIME_HR;
+            break;
+        case IS_FULL_TIME: emphrs = FULL_TIME_HR
+            break;
+        case IS_ABSENT: emphrs = IS_ABSENT;
     }
 }
-let totalEmphrs=0;
-empCheck=Math. floor (Math. randon ()*10)%3;
-totalEmphrs=getWorkingHours (emcheck);
-let totalEmpliage= emphrs*WAGE_PER_HR;
-console. log (totalEmphage);
-
-totalEmphrs=0;
-for(let i=0; 1<NUM_OF_WORKING_DAYS; i++){
-empCheck=Math. floor (Math. random () *10)%3 ;
-totalEmphrs+=getWorkingHours (empCheck);
+let totalEmphrs = 0;
+empCheck = Math.floor(Math.random() * 10) % 3;
+totalEmphrs = getWorkingHours(empCheck);
+let totalEmpWage = emphrs * WAGE_PER_HR;
+console.log(totalEmpWage);
+//UC-4
+let hrs = 0;
+for (let i = 0; i < NUM_OF_WORKING_DAYS; i++) {
+    empCheck = Math.floor(Math.random() * 10) % 3;
+    getWorkingHours(empCheck);
+    hrs += emphrs
 }
-totalEmpWage= totalEmphrs*WAGE_PER_HR;
-console. log (totalEmpWage) ;
+totalEmpWage = hrs * WAGE_PER_HR;
+console.log(totalEmpWage)
