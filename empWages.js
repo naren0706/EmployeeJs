@@ -31,3 +31,20 @@ switch (empCheck) {
 }
 let empWage = emphrs * WAGE_PER_HR;
 console.log(empWage);
+//UC3
+function getworkingHours (empcheck) 
+{
+    switch (empCheck)
+    {
+    case IS_PART_TIME: emphrs=PART_TIME_HR;
+    break;
+    case IS_FULL_TIME: emphrs-FULL_TIME_HR
+    break;
+    case IS_ABSENT: emphrs-IS_ABSENT;
+    }
+}
+let totalEmphrs=0;
+empCheck=Math. floor (Math. randon ()*10)%3;
+totalEmphrs=getWorkingHours (emcheck);
+let totalEmpliage= emphrs*WAGE_PER_HR;
+console. log (totalEmphage);
