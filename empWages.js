@@ -63,12 +63,14 @@ function CalculateDailyWage(emphrs){
 let totalEmpHours = 0;
 let totalWorkingDays=0;
 const DailyWageArray = new Array();
+
 while (totalEmpHours<MAX_HOURS_IN_MONTH && totalWorkingDays<NUM_OF_WORKING_DAYS) {
     totalWorkingDays++;
     empCheck = Math.floor(Math.random() * 10) % 3;
     totalEmphrs+=getWorkingHours(empCheck);
     DailyWageArray.push(CalculateDailyWage(totalEmphrs));
 }
+
 let empWage1 = CalculateDailyWage(totalEmphrs);
 console.log("Total days :"+totalWorkingDays+" Total Hours : "+totalEmphrs+" Emp Wages "+empWage1);
 console.log(DailyWageArray)
